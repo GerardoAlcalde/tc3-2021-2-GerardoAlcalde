@@ -1,0 +1,126 @@
+name: Secuencia Binaria
+init: qinicio
+accept: qfinal
+
+qinicio,0,_,_
+qinicio,0,_,_,>,-,-
+
+qinicio,1,_,_
+qinicio,1,_,_,>,-,-
+
+
+// copiar el input sin el "d" en la segunda linea
+qinicio,#,_,_
+q1,_,_,_,>,-,-
+
+q1,0,_,_
+q1,_,0,_,>,>,-
+
+q1,1,_,_
+q1,_,1,_,>,>,-
+
+q1,#,_,_
+q1,_,#,_,>,>,-
+
+
+// alinear la primera con la segunda fila
+q1,_,_,_
+q2,_,_,_,<,<,-
+
+q2,_,0,_
+name: Secuencia Binaria
+init: qinicio
+accept: qfinal
+
+qinicio,0,_,_
+qinicio,0,_,_,>,-,-
+
+qinicio,1,_,_
+qinicio,1,_,_,>,-,-
+
+
+// copiar el input sin el "d" en la segunda linea
+qinicio,#,_,_
+q1,_,_,_,>,-,-
+
+q1,0,_,_
+q1,_,0,_,>,>,-
+
+q1,1,_,_
+q1,_,1,_,>,>,-
+
+q1,#,_,_
+q1,_,#,_,>,>,-
+
+
+// alinear la primera con la segunda fila
+q1,_,_,_
+q2,_,_,_,<,<,-
+
+q2,_,0,_
+q2,_,0,_,<,-,-
+
+q2,_,1,_
+q2,_,1,_,<,-,-
+
+
+// sumar d con el numero de la segunda fila y el resultado enviarlo a la tercera fila
+q2,1,0,_
+q3,1,0,_,-,-,-
+
+q2,1,1,_
+q3,1,1,_,-,-,-
+
+q2,0,0,_
+q3,0,0,_,-,-,-
+
+q2,0,1,_
+q3,0,1,_,-,-,-
+
+q3,1,0,_
+q3,1,0,1,<,<,<
+
+q3,1,1,_
+qx,1,1,0,<,<,<
+
+q3,0,0,_
+q3,0,0,0,<,<,<
+
+q3,0,1,_
+q3,0,1,1,<,<,<
+
+
+//alinear con el numero que viene despues
+q3,_,#,_
+q4,_,#,_,-,<,-
+
+q4,_,0,_
+q4,_,0,_,-,<,-
+
+q4,_,1,_
+q4,_,1,_,-,<,-
+
+q4,_,#,_
+q5,_,#,_,-,>,>
+
+// comparar los numeros de las ultimas dos filas
+q5,_,0,0
+q5,_,0,0,-,>,>
+
+q5,_,1,1
+q5,_,1,1,-,>,>
+
+q5,_,#,_
+q6,_,#,_,-,<,<
+
+q6,_,1,1
+q6,_,1,_,-,<,<
+
+q6,_,1,0
+q6,_,1,_,-,<,<
+
+q6,_,0,1
+q6,_,0,_,-,<,<
+
+q6,_,0,0
+q6,_,0,_,-,<,<
